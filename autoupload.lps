@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="24">
+      <Unit0>
+        <Filename Value="autoupload.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="32" Y="7"/>
+        <UsageCount Value="39"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="39"/>
+        <Bookmarks Count="1">
+          <Item0 X="3" Y="331" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../synapse/source/lib/blcksock.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2271"/>
+        <CursorPos X="30" Y="2293"/>
+        <UsageCount Value="12"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../synapse/source/lib/ssfpc.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="3" Y="91"/>
+        <UsageCount Value="9"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../synapse/source/lib/tlntsend.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="26" Y="9"/>
+        <UsageCount Value="12"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/usr/lib/lazarus/2.0.10/lcl/include/wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7273"/>
+        <CursorPos X="24" Y="7292"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="/usr/lib/lazarus/2.0.10/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2223"/>
+        <CursorPos Y="2242"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../brookframework-5.4.1/Source/libsagui.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1366"/>
+        <CursorPos X="34" Y="1390"/>
+        <UsageCount Value="9"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="http.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos Y="100"/>
+        <UsageCount Value="9"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="/usr/lib/lazarus/2.0.10/components/turbopower_ipro/iphttpbroker.pas"/>
+        <UnitName Value="Iphttpbroker"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="136"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../mapviewer/kcMapViewerDESynapse.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6"/>
+        <CursorPos X="35" Y="26"/>
+        <UsageCount Value="9"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="/usr/lib/lazarus/2.0.12/components/turbopower_ipro/ipfilebroker.pas"/>
+        <UnitName Value="Ipfilebroker"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../../.lazarus_test/onlinepackagemanager/packages/synapse40.1/tlntsend.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../../../.lazarus_test/onlinepackagemanager/packages/synapse40.1/blcksock.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="437"/>
+        <CursorPos X="15" Y="434"/>
+        <UsageCount Value="12"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1774"/>
+        <CursorPos X="16" Y="1793"/>
+        <UsageCount Value="11"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/rtl/objpas/classes/streams.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="550"/>
+        <CursorPos X="24" Y="561"/>
+        <UsageCount Value="12"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/packages/fcl-web/src/base/fphttpserver.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="151"/>
+        <CursorPos X="21" Y="95"/>
+        <UsageCount Value="11"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/packages/fcl-web/src/base/httpdefs.pp"/>
+        <UnitName Value="HTTPDefs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="379"/>
+        <CursorPos X="14" Y="395"/>
+        <UsageCount Value="11"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/packages/fcl-web/src/base/httpprotocol.pp"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/packages/fcl-web/src/base/fpwebfile.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="239"/>
+        <CursorPos X="31" Y="262"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/rtl/linux/sysosh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="16" Y="32"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/packages/fcl-base/examples/threads.pp"/>
+        <UnitName Value="testthreads"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/rtl/inc/threadh.inc"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="147"/>
+        <CursorPos X="30" Y="167"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/rtl/inc/thread.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="185"/>
+        <CursorPos X="3" Y="188"/>
+        <UsageCount Value="10"/>
+      </Unit23>
+    </Units>
+    <JumpHistory Count="1">
+      <Position1>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="427" Column="21" TopLine="414"/>
+      </Position1>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="1" ActiveMode="default">
+        <Mode0 Name="default">
+          <local>
+            <CommandLineParams Value="/home/richard/development/ultibowifi"/>
+          </local>
+        </Mode0>
+      </Modes>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

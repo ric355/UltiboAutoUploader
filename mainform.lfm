@@ -1,0 +1,83 @@
+object Form1: TForm1
+  Left = 558
+  Height = 524
+  Top = 170
+  Width = 737
+  Caption = 'Ultibo Auto Updater'
+  ClientHeight = 524
+  ClientWidth = 737
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object ConnectButton: TButton
+    Left = 26
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Connect'
+    OnClick = ConnectButtonClick
+    TabOrder = 0
+  end
+  object Memo1: TMemo
+    Left = 24
+    Height = 376
+    Top = 88
+    Width = 694
+    ScrollBars = ssVertical
+    TabOrder = 1
+  end
+  object UpdateKernelButton: TButton
+    Left = 115
+    Height = 25
+    Top = 56
+    Width = 125
+    Caption = 'Update Kernel'
+    Enabled = False
+    OnClick = UpdateKernelButtonClick
+    TabOrder = 2
+  end
+  object LogoutButton: TButton
+    Left = 648
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Logout'
+    Enabled = False
+    OnClick = LogoutButtonClick
+    TabOrder = 3
+  end
+  object Edit1: TEdit
+    Left = 24
+    Height = 33
+    Top = 472
+    Width = 694
+    OnKeyPress = Edit1KeyPress
+    TabOrder = 4
+  end
+  object ServerIP: TEdit
+    Left = 200
+    Height = 33
+    Top = 14
+    Width = 157
+    OnChange = ServerIPChange
+    TabOrder = 5
+    Text = '192.168.1.168'
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 15
+    Top = 22
+    Width = 161
+    Caption = 'Ultibo Telnet IP Address'
+    ParentColor = False
+  end
+  object RestartButton: TButton
+    Left = 256
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Restart'
+    OnClick = RestartButtonClick
+    TabOrder = 6
+  end
+end
