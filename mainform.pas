@@ -271,7 +271,9 @@ begin
          FTelNet.SessionLog:=RightStr(FTelnet.SessionLog, Length(FTelnet.SessionLog)-7);
          Synchronize(@Form1.ShowSessionLog);
 
-         {We do this because we need the prompt to change to the drive letter.
+         {We do this because we need the prompt to change to the drive letter. Ultibo
+          telnet sessions have an oddity in that you get a ">" prompt until you run the "dir"
+          command or other disk related commands, at which point it changes to "C:\"
           note for this to work the application has to be built with ShellFilesystem unit.
           Clear the session log so the results don't show in the display.}
          FTelNet.Send('dir'+#13+#10);
