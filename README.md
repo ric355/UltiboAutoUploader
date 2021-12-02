@@ -1,8 +1,11 @@
 # Ultibo Auto Uploader
 
-This app contains a web server and uses a telnet session to prod the Raspberry
-Pi, running an Ultibo application with the ShellUpdate unit enabled, into downloading
-and installing a new kernel. Note this application is not intended to replace a proper
+This app is used to prod a Raspberry Pi running an Ultibo application into updating itself.
+It contains a web server and uses a telnet session to communicate with the Ultibo application
+running on the Pi. The application must be compiled with the ShellUpdate unit enabled as
+it uses this method to trigger the download.
+
+Note this application is not intended to replace a proper
 telnet session. It is only intended to provide for kernel updating or rebooting the device.
 
 The Pi must be configured with a SHELL_UPDATE_HTTP_SERVER= setting in cmdline.txt
