@@ -54,3 +54,13 @@ your Pi device.
 Close the dialog, press shift-F9, and after compilation the kernel image will be
 sent directly to your Pi and the Pi will reboot.
 
+## Supported OS'
+
+The application has only been tested on Linux. It should work on Windows too as there are
+no hard coded file paths so feel free to give it a try.
+
+## Building
+
+In order to build the software you will need to have installed the Ararat Synapse library
+for the Telnet support. The web server is packaged as standard with Lazarus so there should
+be nothing else needed.
