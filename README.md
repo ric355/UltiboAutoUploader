@@ -67,6 +67,10 @@ your Pi device.
 Close the dialog, press shift-F9, and after compilation the kernel image will be
 sent directly to your Pi and the Pi will reboot.
 
+Note that the Execute After settings should be *per project and per build configuration*
+because the kernel image for each project will be in a different location, and the image
+name will be different depending on the target device (kernel.img, kernel7.img, kernel7l.img)
+
 ## Supported OS'
 
 The application has only been tested on Linux. It should work on Windows too as there are
