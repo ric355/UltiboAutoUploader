@@ -2,15 +2,23 @@
 
 This app is used to prod a Raspberry Pi running an Ultibo application into updating itself.
 It contains a web server and uses a telnet session to communicate with the Ultibo application
-running on the Pi. The application must be compiled with the ShellUpdate unit enabled as
-it uses this method to trigger the download.
+running on the Pi. The application must be compiled with;
 
-Note this application is not intended to replace a proper
-telnet session. It is only intended to provide for kernel updating or rebooting the device.
+```
+uses
+  ShellFilesystem, 
+  ShellUpdate,
+  RemoteShell;
+```
+as it uses this method to trigger the download.
+
+Note this application is not intended to replace a proper telnet session. It is only intended 
+to provide for kernel updating or rebooting the device.
 
 The Pi must be configured with a SHELL_UPDATE_HTTP_SERVER= setting in cmdline.txt
 which points at the host that is running this software. The web server within this application
 is bound to port 8000, which is the standard for Ultibo updating over HTTP.
+(for full details of how to configure a Pi for HTTP updates, see https://ultibo.org/forum/viewtopic.php?f=12&t=61&p=138#p139)
 
 The application can be run in one of two modes;
 - standalone mode, where the application is used interactively
