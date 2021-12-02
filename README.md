@@ -2,7 +2,8 @@
 
 This app contains a web server and uses a telnet session to prod the Raspberry
 Pi, running an Ultibo application with the ShellUpdate unit enabled, into downloading
-and installing a new kernel.
+and installing a new kernel. Note this application is not intended to replace a proper
+telnet session. It is only intended to provide for kernel updating or rebooting the device.
 
 The Pi must be configured with a SHELL_UPDATE_HTTP_SERVER= setting in cmdline.txt
 which points at the host that is running this software.
@@ -19,8 +20,7 @@ ultiboautouploader [ <kernel file location> [<Pi device IP address>] ]
 If no parameters are specified this puts the application into pure standalone mode,
 without any web server support. You can use the application interactively in this
 mode, but you cannot upload files to the device without separately starting a web
-server. Note this application is not intended to replace a proper telnet session.
-It is only intended to provide for kernel updating or rebooting the device.
+server.
 
 If the first parameter is specified, kernel file location, then a web server is
 started pointing at the given location. This makes it possible to use the 'update kernel'
