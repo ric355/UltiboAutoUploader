@@ -11,8 +11,10 @@ The application can be run in one of two modes;
 - standalone mode, where the application is used interactively
 - automatic mode, where the application installs the kernel on the device automatically.
 
-##Usage:
+## Usage:
+```
 ultiboautouploader [ <kernel file location> [<Pi device IP address>] ]
+```
 
 If no parameters are specified this puts the application into pure standalone mode,
 without any web server support. You can use the application interactively in this
@@ -30,7 +32,7 @@ is loaded, it will start a web server, connect to the Pi, issue a kernel update 
 serve the binary via its internal web server, and then terminate.
 
 
-##Use of Automatic Mode
+## Use of Automatic Mode
 
 The purpose of automatic mode is to allow the application to be integrated
 into the Ultibo build system. In the Project Options there is a setting at the bottom
