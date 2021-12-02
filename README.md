@@ -33,7 +33,8 @@ button without starting a separate web server.
 If the second parameter is included, then the first must also be present, and this
 puts the application into automatic mode. In automatic mode, as soon as the application
 is loaded, it will start a web server, connect to the Pi, issue a kernel update command,
-serve the binary via its internal web server, and then terminate.
+serve the binary via its internal web server, and then terminate. After updating, the
+Pi will reboot and your new kernel will be started.
 
 
 ## Use of Automatic Mode
