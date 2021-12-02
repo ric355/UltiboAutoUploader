@@ -9,7 +9,8 @@ Note this application is not intended to replace a proper
 telnet session. It is only intended to provide for kernel updating or rebooting the device.
 
 The Pi must be configured with a SHELL_UPDATE_HTTP_SERVER= setting in cmdline.txt
-which points at the host that is running this software.
+which points at the host that is running this software. The web server within this application
+is bound to port 8000, which is the standard for Ultibo updating over HTTP.
 
 The application can be run in one of two modes;
 - standalone mode, where the application is used interactively
