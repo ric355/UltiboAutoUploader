@@ -62,7 +62,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Ipfilebroker, blcksock, tlntsend, Synautil, fphttpserver, fpwebfile;
+  Ipfilebroker, blcksock, tlntsend, Synautil, fphttpserver, fpwebfile,
+  httpprotocol;
 
 const
   CONNECT_COMMAND = '##connect';              {connect to the telnet server on the pi}
@@ -124,6 +125,8 @@ type
     fhandler : TFPCustomFileModule;
     FWebServerThread : TWebServerThread;
     FTelnetThread : TTelnetThread;
+    FFileLocation : string;
+
     procedure ShowURL;
     procedure DoHandleRequest(Sender: TObject;
                         var ARequest: TFPHTTPConnectionRequest;
@@ -412,8 +415,8 @@ end;
 procedure TForm1.DoHandleRequest(Sender: TObject;
                     var ARequest: TFPHTTPConnectionRequest;
                     var  AResponse: TFPHTTPConnectionResponse);
-Var
-  F : TStringStream;
+var
+  f : file of byte;
 begin
   FURL:=Arequest.URL;
   FReqStr := ARequest.Method;
@@ -421,14 +424,16 @@ begin
 
   if (ARequest.Method = 'HEAD') then
   begin
-    F:=TStringStream.Create('');
     try
-      AResponse.ContentLength:=1000;
-      AResponse.ContentStream:=F;
+      assignfile(f, FFileLocation + ARequest.URL);
+      reset(f);
+      AResponse.ContentLength := filesize(f);
+      AResponse.ContentType := 'application/octet-stream';
+      closefile(f);
+
       AResponse.SendContent;
       AResponse.ContentStream:=Nil;
     finally
-      F.Free;
     end;
   end
   else
@@ -447,17 +452,15 @@ begin
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
-var
-  FileLocation : string;
 begin
   if (ParamStr(1) <> '') then
   begin
     {this is the file location of where to serve files from}
-    FileLocation := ParamStr(1);
-    Memo1.Lines.Add('Files will be served from [' + FileLocation + ']');
+    FFileLocation := ParamStr(1);
+    Memo1.Lines.Add('Files will be served from [' + FFileLocation + ']');
 
     {setup file location and web server}
-    RegisterFileLocation('files', FileLocation);
+    RegisterFileLocation('files', FFileLocation);
 
     {this is not needed as it defaults to octet stream if not present}
     {that is preferable as we don't know where this file will be on all OS'}
@@ -470,7 +473,7 @@ begin
   end
   else
   begin
-    FileLocation := '.';
+    FFileLocation := '.';
     Memo1.Lines.Add('Warning: The web server is not active when a file location is not provided on the command line.');
   end;
 
