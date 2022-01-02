@@ -142,6 +142,7 @@ type
   end;
 
 
+
 var
   Form1: TForm1;
 
@@ -418,14 +419,14 @@ procedure TForm1.DoHandleRequest(Sender: TObject;
 var
   f : file of byte;
 begin
-  FURL:=Arequest.URL;
+  FURL:=HTTPDecode(Arequest.URL);
   FReqStr := ARequest.Method;
   FWebServerThread.Synchronize(@ShowURL);
 
   if (ARequest.Method = 'HEAD') then
   begin
     try
-      assignfile(f, FFileLocation + ARequest.URL);
+      assignfile(f, FFileLocation + FURL);
       reset(f);
       AResponse.ContentLength := filesize(f);
       AResponse.ContentType := 'application/octet-stream';
@@ -437,7 +438,11 @@ begin
     end;
   end
   else
+  begin
+    ARequest.URL:=HTTPDecode(ARequest.URL);
+    ARequest.PathInfo := HTTPDecode(ARequest.PathInfo);
     FHandler.HandleRequest(ARequest,AResponse);
+  end;
 end;
 
 procedure TForm1.ShowURL;
