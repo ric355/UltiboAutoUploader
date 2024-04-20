@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 558
+  Left = 510
   Height = 524
-  Top = 170
+  Top = 169
   Width = 737
   Caption = 'Ultibo Auto Updater'
   ClientHeight = 524

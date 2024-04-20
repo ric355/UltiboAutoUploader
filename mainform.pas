@@ -245,6 +245,9 @@ begin
            Synchronize(@Form1.ShowSessionLog);
          end;
 
+         {pause before logging out}
+         sleep(1000);
+
          {reboots after update, so we're logged out}
          Synchronize(@Form1.ButtonStateLoggedOut);
        end
@@ -345,6 +348,7 @@ end;
 procedure TForm1.AddThreadMessage;
 begin
   memo1.lines.add(FTelnetThread.FMessage);
+  memo1.SelStart:=Length(memo1.Text);
 end;
 
 procedure TForm1.ButtonStateLoggedIn;
@@ -365,6 +369,7 @@ end;
 procedure TForm1.ShowSessionLog;
 begin
   memo1.text := FTelnetThread.FTelNet.SessionLog;
+  memo1.SelStart:=Length(memo1.Text);
 end;
 
 procedure TForm1.ConnectButtonClick(Sender: TObject);
@@ -448,6 +453,7 @@ end;
 procedure TForm1.ShowURL;
 begin
   memo1.Lines.Add('Serving up request for '+FURL +'('+FReqStr+')');
+  memo1.SelStart:=Length(memo1.Text);
 end;
 
 procedure TForm1.CloseApplication;
@@ -463,6 +469,7 @@ begin
     {this is the file location of where to serve files from}
     FFileLocation := ParamStr(1);
     Memo1.Lines.Add('Files will be served from [' + FFileLocation + ']');
+    memo1.SelStart:=Length(memo1.Text);
 
     {setup file location and web server}
     RegisterFileLocation('files', FFileLocation);
@@ -480,6 +487,7 @@ begin
   begin
     FFileLocation := '.';
     Memo1.Lines.Add('Warning: The web server is not active when a file location is not provided on the command line.');
+    memo1.SelStart:=Length(memo1.Text);
   end;
 
   FTelnetThread := TTelnetThread.Create
